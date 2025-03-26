@@ -1,6 +1,6 @@
 import { Schema } from 'querymen';
 
-const index = ({ page = 1, limit = 10, sort = ['index'], search = [], filters = [] } = {}) => {
+const index = ({ page = 1, limit = 10, sort = ['_id'], search = [], filters = [] } = {}) => {
   let all_filters = {};
 
   filters.forEach((filter) => {
