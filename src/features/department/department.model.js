@@ -2,17 +2,11 @@ import mongoose from 'mongoose';
 import mongooseSequence from 'mongoose-sequence';
 
 const schema = new mongoose.Schema({
-  index: {
-    type: Number,
-    index: true,
-    unique: [true, 'The provided inde" must be unique.'],
-  },
-
   name: {
     type: String,
     trim: true,
-    required: [true, 'The name is required'],
-    unique: [true, 'The provided name must be unique.'],
+    required: [true, 'the name is required'],
+    unique: [true, 'the provided name must be unique'],
   },
 
   description: {
