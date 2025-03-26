@@ -8,8 +8,17 @@ const index = async ({ model, params = {} }) => {
 };
 
 const show = async ({ model, value, fields = ['_id', 'index'] } = {}) => {
-  const data = await model.findById(id);
-  return data;
+  for (const field of fields) {
+    try {
+      const query = { [field]: value };
+      const data = await model.findOne(query);
+      if (data) return data;
+    } catch (error) {
+      continue;
+    }
+  }
+
+  return null;
 };
 
 export const crud = {
