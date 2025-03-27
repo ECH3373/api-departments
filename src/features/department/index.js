@@ -1,7 +1,7 @@
-import { controller } from './department.controller.js';
-import { model } from './department.model.js';
-import { query } from './department.query.js';
-import { router } from './department.router.js';
+import { controller } from './controller.js';
+import { model } from './model.js';
+import { query } from './query.js';
+import { router } from './router.js';
 
 export const department = {
   controller,

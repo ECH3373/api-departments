@@ -1,7 +1,7 @@
 import { Router } from 'express';
 import { middleware } from 'querymen';
-import { controller } from './department.controller.js';
-import { query } from './department.query.js';
+import { controller } from './controller.js';
+import { query } from './query.js';
 
 export const router = Router();
 router.get('/', middleware(query.index), controller.index);
