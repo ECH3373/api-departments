@@ -5,7 +5,7 @@
   "main": "index.js",
   "type": "module",
   "scripts": {
-    "start": "node index.js && npx prisma db push",
+    "start": "npx prisma db push && node index.js",
     "dev": "nodemon index.js"
   },
   "repository": {
